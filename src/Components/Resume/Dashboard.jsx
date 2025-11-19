@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import "../../assets/CSS/Dashboard.css"
-import Sidebar from '../Layout/Sidebar';
+import Sidebar from '../Layout/ResumeSidebar';
 
 const cards = [
     {

@@ -20,6 +20,8 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import { Link } from "react-router-dom";
+
 
 const drawerWidth = 230;
 
@@ -83,12 +85,13 @@ const Drawer = styled(MuiDrawer)(({ theme, open }) => ({
 }));
 
 const menuItems = [
-  { text: "Dashboard", icon: <DashboardIcon /> },
-  { text: "Resume Upload", icon: <UploadFileIcon /> },
-  { text: "Resume Info", icon: <InfoIcon /> },
-  { text: "User Details", icon: <PersonIcon /> },
-  { text: "Resume Form", icon: <DynamicFormIcon /> },
+  { text: "Dashboard", icon: <DashboardIcon />, path: "/" },
+  { text: "User Details", icon: <PersonIcon />, path: "/user_details" },
+  { text: "Resume Form", icon: <DynamicFormIcon />, path: "/resume_form" },
+  { text: "Resume Upload", icon: <UploadFileIcon />, path: "/resume_upload" },
+  { text: "Resume Info", icon: <InfoIcon />, path: "/resume_info" },
 ];
+
 
 export default function MiniDrawer() {
   const theme = useTheme();
@@ -136,19 +139,18 @@ export default function MiniDrawer() {
 
         <List>
           {menuItems.map((item, index) => (
-            <ListItem key={item.text} disablePadding>
+            <ListItem key={item.path} disablePadding>
               <ListItemButton
+                component={Link}
+                to={item.path}
                 onClick={() => setSelectedIndex(index)}
                 sx={{
                   minHeight: 48,
                   px: 2,
-                  backgroundColor:
-                    selectedIndex === index ? "#e9e4ff" : "transparent",
+                  backgroundColor: selectedIndex === index ? "#e9e4ff" : "transparent",
                   borderRadius: "8px",
                   margin: 1,
-                  "&:hover": {
-                    backgroundColor: "#dfd8ff",
-                  },
+                  "&:hover": { backgroundColor: "#dfd8ff" },
                   justifyContent: open ? "initial" : "center",
                 }}
               >
@@ -173,6 +175,7 @@ export default function MiniDrawer() {
                 />
               </ListItemButton>
             </ListItem>
+
           ))}
         </List>
       </Drawer>
