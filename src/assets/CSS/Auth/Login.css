@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.login-form-wrapper {
+    width: 60%;
+    max-width: 500px;
+    padding: 2rem;
+    background-size: cover;
+    background-image: url("../../images/image3.jpg");
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.login-form-wrapper h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+.form-group input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    box-shadow: 0 0 0 3px rgba(143, 129, 237, 0.3);
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background: #8f81ed;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #7a6de8;
+    transform: translateY(-2px);
+}
+
+.auth-link {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: black;
+    font-weight: 600;
+}
+
+.link-text {
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link-text:hover {
+    color: #8f81ed;
+}

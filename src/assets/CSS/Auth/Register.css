@@ -1,0 +1,103 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px 0;
+}
+
+.register-form-wrapper {
+    width: 60%;
+    max-width: 500px;
+    padding: 2rem;
+    background-size: cover;
+    background-image: url("../../images/image3.jpg");
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+}
+
+.register-form-wrapper h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 2rem;
+}
+
+/* === GRID FORM === */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+
+/* Submit Button Full Width */
+.submit-btn {
+    grid-column: span 2; 
+    width: 100%;
+    padding: 0.75rem;
+    background: #8a79f8 !important;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #8f81ed;
+    color: white;
+}
+
+.login-redirect {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    grid-column: span 2;
+}
+
+.login-redirect a {
+    color: #8a79f8;
+    cursor: pointer;
+    text-decoration: underline;
+}

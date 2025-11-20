@@ -1,18 +1,219 @@
-body{
+body {
     background-color: white;
 }
-.dashboard-box{
+
+.dashboard-box {
     display: flex;
-    width: 100%;
     gap: 2rem;
-    margin-bottom: 50%;
+    margin-top: 50px;
 }
-.dashboard-card{
-    width:15vw;
-    background-color:#8f81ed !important ;
+
+.dashboard-card {
+    width: 20vw;
+    height: 140px;
+    background-color: #8f81ed !important;
     border-radius: 10px !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px !important;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
-.card-title{
-    color: grey;
+
+.dashboard-card:hover {
+    transform: scale(1.06);
+    /* Zoom-in */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    color: blueviolet;
+    font-size: 36px !important;
+    margin: 10px !important;
+    padding: 0 !important;
+}
+
+.card-description {
+    color: white;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    justify-content: center !important;
+    font-family: 'Poppins', sans-serif !important;
+    margin-top: 4px !important;
+    /* Tight spacing */
+}
+
+.resume-card {
+    margin-top: 50px;
+}
+
+.resume-card-box {
+    margin: 20px 40px;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #8f81ed, #b19bff);
+    border-radius: 12px;
+    color: white;
+    height: auto;
+    box-shadow: 0px 3px 10px rgba(150, 120, 255, 0.4);
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    line-height: 1.6rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.resume-card-box:hover {
+    transform: scale(1.06);
+    /* Zoom-in */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.resume-card-content {
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.resume-dashboard-box {
+    display: flex;
+    gap: 2rem;
+    width: 200%;
+    height: 200% !important;
+    margin-top: 50px;
+    margin-left: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.resume-dashboard-box:hover {
+    transform: scale(1.06);
+    /* Zoom-in */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.resume-dashboard-card {
+    width: 30vw;
+    height: 300px;
+    background: linear-gradient(135deg, #a99eef, #b19bff) !important;
+    border-radius: 10px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px !important;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.resume-card-title {
+    color: blueviolet;
+    font-size: 32px !important;
+    margin: 10px !important;
+    padding: 0 !important;
+}
+
+.resume-card-description {
+    color: white;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    justify-content: center !important;
+    font-family: 'Poppins', sans-serif !important;
+    margin-top: 4px !important;
+}
+
+.resume-img-card {
+    width: 15%;
+    margin-top: 30px;
+}
+
+.resume-card-container {
+    display: flex;
+}
+
+.card-img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    vertical-align: middle;
+    transition: transform 0.4s ease;
+}
+
+.resume-heading {
+    color: blueviolet;
+}
+
+.img-wrap {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.img-wrap:hover .card-img {
+    transform: scale(1.4);
+}
+
+.resume-Footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(135deg, #a99eef, #b19bff);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.page-content {
+    padding-bottom: 300px;
+    /* space for footer */
+}
+
+.resume-footer-card-content {
+    margin-left: 70%;
+}
+
+.dashboard-info-box {
+    margin: 30px;
+}
+
+.dashboard-info-card {
+    background: linear-gradient(135deg, #a99eef, #b19bff) !important;
+    color: #fff !important;
+    border-radius: 15px !important;
+    padding: 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 30px; /* space between cards */
+    margin-top: 20px;
+}
+
+.info-card-box {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.info-card-box:hover {
+    transform: translateY(-6px);
+}
+.info-heading{
+    color: blueviolet;
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    margin-top:20px;
 }

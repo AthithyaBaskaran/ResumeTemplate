@@ -4,7 +4,6 @@ import Dashboard from './Components/Resume/Dashboard'
 import ResumeInfo from './Components/Resume/ResumeInfo'
 import ResumeUpload from './Components/Resume/ResumeUpload'
 import UserDetails from './Components/Resume/UserDetails'
-import ResumeForm from './Components/Resume/ResumeForm'
 import Login from './Components/Auth/Login';
 import Register from './Components/Auth/Register';
 
@@ -16,7 +15,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Dashboard />} />
           <Route path='/user_details' element={<UserDetails />} />
-          <Route path='/resume_form' element={<ResumeForm />} />
           <Route path='/resume_info' element={<ResumeInfo />} />
           <Route path='/resume_upload' element={<ResumeUpload />} />
           <Route path='/Login' element={<Login />} />
